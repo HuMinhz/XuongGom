@@ -1,0 +1,132 @@
+/* --- BIẾN MÀU (Bản sắc thương hiệu mới) --- */
+:root {
+    --primary: #1A365D;    /* Xanh Men Lam đậm (Màu chủ đạo) */
+    --accent: #C05621;     /* Cam Đất nung (Màu nhấn) */
+    --accent-hover: #9C4221;
+    --text-dark: #2D3748;
+    --text-light: #718096;
+    --bg-page: #F7FAFC;    /* Trắng hơi lạnh */
+    --bg-gray: #EDF2F7;
+    --white: #FFFFFF;
+    
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --radius: 8px;
+    --transition: 0.3s ease;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-main); background-color: var(--bg-page); color: var(--text-dark); line-height: 1.6; }
+a { text-decoration: none; }
+ul { list-style: none; }
+
+.container { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+.section-padding { padding: 80px 0; }
+
+/* --- TYPOGRAPHY --- */
+h1, h2, h3, h4 { color: var(--primary); line-height: 1.2; margin-bottom: 15px; }
+h1 { font-size: 3.5rem; font-weight: 800; color: var(--primary); }
+h2 { font-size: 2.2rem; }
+.section-title-center { text-align: center; max-width: 600px; margin: 0 auto 50px; }
+.section-title-center p { color: var(--text-light); font-size: 1.1rem; }
+
+/* --- BUTTONS --- */
+.btn-primary { background: var(--accent); color: var(--white); padding: 12px 28px; border-radius: var(--radius); font-weight: 600; display: inline-block; transition: var(--transition); border: none; cursor: pointer; }
+.btn-primary:hover { background: var(--accent-hover); }
+.btn-secondary { background: transparent; color: var(--primary); padding: 12px 28px; border-radius: var(--radius); font-weight: 600; border: 2px solid var(--primary); display: inline-block; transition: var(--transition); }
+.btn-secondary:hover { background: var(--primary); color: var(--white); }
+.block-btn { width: 100%; text-align: center; }
+
+/* --- NAVBAR (Layout Đậm) --- */
+.navbar { background-color: var(--primary); padding: 15px 0; position: sticky; top: 0; z-index: 100; }
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
+.brand-logo { color: var(--white); font-size: 1.5rem; font-weight: bold; letter-spacing: 2px; }
+.nav-links { display: flex; gap: 30px; align-items: center; }
+.nav-links a { color: #E2E8F0; font-size: 0.95rem; transition: var(--transition); }
+.nav-links a:hover { color: var(--white); }
+.btn-cta { border: 1px solid var(--accent); padding: 8px 20px; border-radius: 50px; color: var(--accent) !important; font-weight: 600; }
+.btn-cta:hover { background: var(--accent); color: var(--white) !important; }
+
+/* --- HERO SPLIT-SCREEN --- */
+.hero-split { display: grid; grid-template-columns: 1fr 1fr; min-height: 85vh; background: var(--bg-page); }
+.hero-content { padding: 10% 10% 10% 15%; display: flex; flex-direction: column; justify-content: center; }
+.tagline { text-transform: uppercase; letter-spacing: 2px; color: var(--accent); font-weight: 700; font-size: 0.85rem; margin-bottom: 15px; display: block; }
+.hero-content p { font-size: 1.1rem; color: var(--text-light); margin-bottom: 30px; margin-top: 10px; max-width: 450px; }
+.btn-group { display: flex; gap: 15px; margin-bottom: 40px; }
+.trust-indicators { display: flex; gap: 20px; font-size: 0.85rem; color: var(--primary); font-weight: 600; }
+.hero-visual { background-color: var(--primary); background-image: linear-gradient(135deg, #1A365D 0%, #2B6CB0 100%); position: relative; }
+.art-block { position: absolute; top: 10%; right: 10%; bottom: 10%; left: -10%; background: #D6E4F0; border-radius: 20px; box-shadow: -20px 20px 60px rgba(0,0,0,0.1); border: 8px solid var(--white); display: flex; align-items: center; justify-content: center; font-size: 4rem; color: var(--primary); }
+.art-block::after { content: '🏺'; }
+
+/* --- NEEDS SECTION --- */
+.needs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.need-item { background: var(--white); padding: 40px 30px; border-radius: var(--radius); text-align: center; border: 1px solid #E2E8F0; transition: transform 0.3s; }
+.need-item:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.05); border-bottom: 4px solid var(--accent); }
+.need-icon { font-size: 3rem; margin-bottom: 20px; }
+.need-item p { color: var(--text-light); font-size: 0.95rem; }
+
+/* --- PROCESS TIMELINE (Layout Cột dọc) --- */
+.bg-dark { background-color: var(--primary); color: var(--white); }
+.bg-dark h2 { color: var(--white); }
+.process-layout { display: grid; grid-template-columns: 40% 60%; gap: 60px; align-items: center; }
+.process-text p { color: #CBD5E0; font-size: 1.1rem; }
+.process-timeline { border-left: 2px dashed #4A5568; padding-left: 40px; }
+.timeline-step { position: relative; margin-bottom: 40px; }
+.timeline-step:last-child { margin-bottom: 0; }
+.step-dot { position: absolute; left: -57px; top: 0; width: 32px; height: 32px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; border: 4px solid var(--primary); }
+.timeline-step h4 { color: var(--white); margin-bottom: 5px; }
+.timeline-step p { color: #A0AEC0; font-size: 0.95rem; }
+
+/* --- PRODUCTS (Masonry Grid) --- */
+.product-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.prod-card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border: 1px solid #E2E8F0; }
+.prod-img { height: 220px; background: var(--bg-gray); display: flex; justify-content: center; align-items: center; font-size: 4rem; }
+.prod-desc { padding: 20px; }
+.prod-desc h4 { font-size: 1.1rem; margin-bottom: 5px; }
+.price { color: var(--accent); font-weight: 700; display: block; margin-bottom: 10px; }
+.prod-desc p { font-size: 0.85rem; color: var(--text-light); }
+
+/* --- FAQ SECTION --- */
+.bg-gray { background-color: var(--bg-gray); }
+.faq-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 60px; }
+.faq-item { background: var(--white); padding: 25px; border-radius: var(--radius); margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+.faq-item h4 { margin-bottom: 10px; color: var(--primary); font-size: 1.1rem; }
+.faq-item p { color: var(--text-light); font-size: 0.95rem; }
+
+/* --- ACTION / CONTACT SECTION --- */
+.action-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.action-box { padding: 50px; border-radius: 20px; }
+.workshop-box { background: var(--accent); color: var(--white); }
+.workshop-box h2 { color: var(--white); }
+.badge-white { background: rgba(255,255,255,0.2); padding: 5px 12px; border-radius: 4px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; display: inline-block; margin-bottom: 15px; }
+.check-list li { margin-top: 10px; padding-left: 20px; position: relative; }
+.check-list li::before { content: '•'; position: absolute; left: 0; font-weight: bold; }
+.contact-box { background: var(--white); border: 1px solid #E2E8F0; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+.custom-form { margin-top: 25px; display: flex; flex-direction: column; gap: 15px; }
+.custom-form input, .custom-form textarea { width: 100%; padding: 14px; border: 1px solid #CBD5E0; border-radius: var(--radius); font-family: inherit; background: var(--bg-page); }
+.custom-form input:focus, .custom-form textarea:focus { outline: none; border-color: var(--primary); }
+
+/* --- FOOTER --- */
+.site-footer { background: #112240; color: #A0AEC0; padding: 50px 0; }
+.footer-layout { display: flex; justify-content: space-between; }
+.footer-info h3 { color: var(--white); margin-bottom: 10px; letter-spacing: 2px; font-size: 1.2rem; }
+.footer-contact { text-align: right; }
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 992px) {
+    .hero-split, .process-layout, .faq-layout, .action-grid { grid-template-columns: 1fr; }
+    .hero-content { padding: 50px 20px; }
+    .art-block { display: none; /* Ẩn khối trang trí trên mobile để nhường chỗ text */ }
+    .needs-grid, .product-gallery { grid-template-columns: repeat(2, 1fr); }
+    .process-timeline { border-left: none; padding-left: 0; }
+    .step-dot { position: relative; left: 0; margin-bottom: 10px; }
+    .timeline-step { border-left: 2px dashed #4A5568; padding-left: 20px; padding-bottom: 20px; margin-bottom: 0; }
+}
+
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .needs-grid, .product-gallery { grid-template-columns: 1fr; }
+    h1 { font-size: 2.5rem; }
+    .footer-layout { flex-direction: column; gap: 20px; text-align: center; }
+    .footer-contact { text-align: center; }
+}
